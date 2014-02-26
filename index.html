@@ -1,0 +1,118 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1255">
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Poller+One' rel='stylesheet' type='text/css'>
+	<script type="text/javascript" src="actionslide.min.js"></script>
+	<link rel='stylesheet' href="actionslide.css" type="text/css">
+	<title>ActionSlideJS Demo</title>
+
+	<style>
+		.animationCanvas {
+			background: #959595; /* Old browsers */
+			/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+			background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzk1OTU5NSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjQ2JSIgc3RvcC1jb2xvcj0iIzBkMGQwZCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iIzAxMDEwMSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUzJSIgc3RvcC1jb2xvcj0iIzBhMGEwYSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9Ijc2JSIgc3RvcC1jb2xvcj0iIzRlNGU0ZSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9Ijg3JSIgc3RvcC1jb2xvcj0iIzM4MzgzOCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMxYjFiMWIiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+			background: -moz-linear-gradient(top,  #959595 0%, #0d0d0d 46%, #010101 50%, #0a0a0a 53%, #4e4e4e 76%, #383838 87%, #1b1b1b 100%); /* FF3.6+ */
+			background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#959595), color-stop(46%,#0d0d0d), color-stop(50%,#010101), color-stop(53%,#0a0a0a), color-stop(76%,#4e4e4e), color-stop(87%,#383838), color-stop(100%,#1b1b1b)); /* Chrome,Safari4+ */
+			background: -webkit-linear-gradient(top,  #959595 0%,#0d0d0d 46%,#010101 50%,#0a0a0a 53%,#4e4e4e 76%,#383838 87%,#1b1b1b 100%); /* Chrome10+,Safari5.1+ */
+			background: -o-linear-gradient(top,  #959595 0%,#0d0d0d 46%,#010101 50%,#0a0a0a 53%,#4e4e4e 76%,#383838 87%,#1b1b1b 100%); /* Opera 11.10+ */
+			background: -ms-linear-gradient(top,  #959595 0%,#0d0d0d 46%,#010101 50%,#0a0a0a 53%,#4e4e4e 76%,#383838 87%,#1b1b1b 100%); /* IE10+ */
+			background: linear-gradient(to bottom,  #959595 0%,#0d0d0d 46%,#010101 50%,#0a0a0a 53%,#4e4e4e 76%,#383838 87%,#1b1b1b 100%); /* W3C */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#959595', endColorstr='#1b1b1b',GradientType=0 ); /* IE6-8 */
+
+			height: 300px; 
+			width: 100%;
+		}
+
+		body {
+			margin: 0px; 
+			padding: 0px; 
+			overflow: hidden;
+			text-align: center;
+			font-family: Arial;
+		}
+
+		h1 {
+			margin-top: 100px;
+			font-family: 'Poller One', cursive;
+			font-size: 42px;
+		}
+	</style>
+</head>
+<body>
+	<div class="animationCanvas">
+		<ul id="myAnimation" data-role="actionSlide" data-animate-background="false">
+			<li data-title="ActionSlideJS" data-duration="3000" data-animation="fade" data-direction="ltr" data-align="left" >
+				<span>
+				</span>
+			</li>
+			<li data-title="Author" data-duration="2000" data-animation="fade" data-direction="ltr" data-align="center">
+				<span>
+					<a href="http://codecanyon.net/user/liriboy" target="_blank">Liriboy</a>
+				</span>
+			</li>
+			<li data-title="Feature List" data-duration="3000" data-animation="fade" data-direction="ltr" data-align="left">
+				<span>
+				</span>
+			</li>
+			<li data-title="Slide Animation" data-duration="4000" data-animation="slide" data-direction="ltr" data-align="left">
+				<span>
+					Sliiiiiiidddddinnnnng
+				</span>
+			</li>
+			<li data-title="Direction Control" data-duration="4000" data-animation="slide" data-direction="rtl" data-align="left">
+				<span>
+					Sliiiiiiidddddinnnnng
+				</span>
+			</li>
+			<li data-title="Fade Animation" data-duration="2000" data-animation="fade" data-direction="ltr" data-align="center">
+				<span>
+					boooo!
+				</span>
+			</li>
+			<li data-title="HTML Slides!" data-duration="3000" data-animation="slide" data-direction="rtl" data-align="left">
+				<span>
+					<ul>
+						<li style="color: yellow">
+							I'm Yellow
+						</li>
+						<li style="font-weight: bolder">
+							I'm Bold
+						</li>
+						<li style="text-decoration: underline">
+							I'm underlined!
+						</li>
+					</ul>					
+				</span>
+			</li>
+			<li data-title="Image Slides" data-duration="4000" data-animation="slide" data-direction="ltr" data-align="center">
+				<img src="samples/triworks_abstract22.jpg" width="200"/>
+				<br/>
+				<img src="samples/triworks_abstract26.jpg" width="100"/>
+				<img src="samples/triworks_abstract27.jpg" width="100"/>
+			</li>
+			<li data-title="" data-duration="5000" data-animation="fade" data-direction="ltr" data-align="left" >
+				<span>
+					Thank you!
+				</span>
+			</li>
+		</ul>
+	</div>
+	<header>
+		<h1>ActionSlide JS</h1>
+		<h3>Easy "Action Movie" animation style!</h3>
+	</header>
+	<section>
+		<h4>Check this out:</h4>
+		<span>
+			<a href="samples/simpleUsage.html">Simple Usage</a> |
+			<a href="samples/events.html">Events Registration</a> |
+			<a href="samples/css3Background.html">CSS3 Integration</a> |
+			<a href="docs/index.html">Documentation</a>
+		</span>
+	</section>
+	<footer style="position: absolute; bottm: 10px; right: 10px;">
+		By <a href="http://codecanyon.net/user/liriboy" target="_blank">liriboy</a>
+	</footer>
+</body>
+</html>

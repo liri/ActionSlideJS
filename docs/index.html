@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="js/bootstrap.min.css" media="screen" rel="stylesheet" type="text/css">
+        <link href="js/bootstrap-responsive.min.css" media="screen" rel="stylesheet" type="text/css">
+        <script src="http://codeorigin.jquery.com/jquery-2.0.3.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <meta charset="UTF-8">
+        <style type="text/css">
+        	h1 {
+        		margin-top: 50px;
+        	}
+            .bs-docs-sidenav {
+                  width: 228px;
+                  margin: 50px 0 0;
+                  padding: 0;
+                  background-color: #fff;
+                  -webkit-border-radius: 6px;
+                     -moz-border-radius: 6px;
+                          border-radius: 6px;
+                  -webkit-box-shadow: 0 1px 4px rgba(0,0,0,.065);
+                     -moz-box-shadow: 0 1px 4px rgba(0,0,0,.065);
+                          box-shadow: 0 1px 4px rgba(0,0,0,.065);
+                }
+                .bs-docs-sidenav > li > a {
+                  display: block;
+                  width: 190px \9;
+                  margin: 0 0 -1px;
+                  padding: 8px 14px;
+                  border: 1px solid #e5e5e5;
+                }
+                .bs-docs-sidenav > li:first-child > a {
+                  -webkit-border-radius: 6px 6px 0 0;
+                     -moz-border-radius: 6px 6px 0 0;
+                          border-radius: 6px 6px 0 0;
+                }
+                .bs-docs-sidenav > li:last-child > a {
+                  -webkit-border-radius: 0 0 6px 6px;
+                     -moz-border-radius: 0 0 6px 6px;
+                          border-radius: 0 0 6px 6px;
+                }
+                .bs-docs-sidenav > .active > a {
+                  position: relative;
+                  z-index: 2;
+                  padding: 9px 15px;
+                  border: 0;
+                  text-shadow: 0 1px 0 rgba(0,0,0,.15);
+                  -webkit-box-shadow: inset 1px 0 0 rgba(0,0,0,.1), inset -1px 0 0 rgba(0,0,0,.1);
+                     -moz-box-shadow: inset 1px 0 0 rgba(0,0,0,.1), inset -1px 0 0 rgba(0,0,0,.1);
+                          box-shadow: inset 1px 0 0 rgba(0,0,0,.1), inset -1px 0 0 rgba(0,0,0,.1);
+                }
+        </style>
+    </head>
+    <body data-spy="scroll" data-target="#navbar">
+        <section class="container">
+            <div class="container-fluid">
+                <div class="row-fluid">
+                    <div id="navbar" class="span3">
+                        <ul class="nav nav-list bs-docs-sidenav affix-top" data-spy="affix" data-offset-top="0">
+                        	<li>
+                                <a href="#started">Getting Started</a>
+                            </li>
+                            <li>
+                                <a href="#basic">Basic example</a>
+                            </li>
+                            <li>
+                                <a href="#options">Helpful options</a>
+                            </li>
+                            <li>
+                                <a href="#css">CSS customization</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="span8">
+                    	<section id="started"> 
+                            <div class="page-header">
+                                <h1>Getting Started</h1>
+                            </div>
+                            <p>
+                            ActionSlideJS is a tiny animation library for creating a "action movie opening" like animation (also works as jQuery plugin).
+                            <br/>
+                            To start use ActionSlideJS, include jQuery library:
+                            </p>
+<pre class="prettyprint linenums">
+  <span style="color:#687687">&lt;</span>script src<span style="color:#687687">=</span><span style="color:#036a07">"js/jquery.min.js"</span><span style="color:#687687">></span><span style="color:#687687">&lt;</span>/script<span style="color:#687687">></span>
+</pre>
+                            <p>
+                            Include ActionSlideJS library:
+                            </p>
+<pre class="prettyprint linenums">
+  <span style="color:#687687">&lt;</span>script src<span style="color:#687687">=</span><span style="color:#036a07">"js/actionslide.min.js"</span><span style="color:#687687">></span><span style="color:#687687">&lt;</span>/script<span style="color:#687687">></span>
+</pre>
+							<p>
+                            Include ActionSlideJS styling (CSS):
+                            </p>
+<pre class="prettyprint linenums">
+  <span style="color:#687687">&lt;</span>link rel<span style="color:#687687">=</span><span style="color:#036a07">"stylesheet"</span> type<span style="color:#687687">=</span><span style="color:#036a07">"text/css"</span> href<span style="color:#687687">=</span><span style="color:#036a07">"css/actionslide.css"</span> /<span style="color:#687687">></span>
+</pre>
+							<h4>You're good to go!</h4>
+						</section>
+                        <section id="basic"> 
+                            <div class="page-header">
+                                <h1>Basic example</h1>
+                            </div>
+                                           
+                            <h2>Zero lines of code!</h2>
+                            <p>
+                            ActionSlideJS automatically detect your DOM element. Just place "data-role='actionSlide'" on your list element (ul):
+                            </p>
+<pre class="prettyprint linenums">
+  <span style="color:#1c02ff">&lt;<span style="font-weight:700">ul</span> <span style="font-style:italic">data-role</span>=<span style="color:#036a07">"actionSlide"</span>></span>
+        <span style="color:#1c02ff">&lt;<span style="font-weight:700">li</span> <span style="font-style:italic">data-title</span>=<span style="color:#036a07">"Slide I"</span> <span style="font-style:italic">data-duration</span>=<span style="color:#036a07">"3000"</span>></span>
+            <span style="color:#1c02ff">&lt;<span style="font-weight:700">span</span>></span>Slide I Content<span style="color:#1c02ff">&lt;/<span style="font-weight:700">span</span>></span>
+        <span style="color:#1c02ff">&lt;/<span style="font-weight:700">li</span>></span>
+        <span style="color:#1c02ff">&lt;<span style="font-weight:700">li</span> <span style="font-style:italic">data-title</span>=<span style="color:#036a07">"Slide II"</span> <span style="font-style:italic">data-duration</span>=<span style="color:#036a07">"2000"</span>></span>
+            <span style="color:#1c02ff">&lt;<span style="font-weight:700">span</span>></span>Slide II Content<span style="color:#1c02ff">&lt;/<span style="font-weight:700">span</span>></span>
+        <span style="color:#1c02ff">&lt;/<span style="font-weight:700">li</span>></span>
+<span style="color:#1c02ff">&lt;/<span style="font-weight:700">ul</span>
+</span></pre>
+                        </section>
+                        <section id="options">
+                            <div class="page-header">
+                                <h1>Helpful options</h1>
+                            </div>
+                            <h2>Stage Animation</h2>
+                            <p>There is an option to animate background lines, you can disable it using:</p>
+                            <h3>data-animate-background</h3>
+<pre class="prettyprint linenums">
+<span style="color:#1c02ff">&lt;<span style="font-weight:700">ul</span> <span style="font-style:italic">data-role</span>=<span style="color:#036a07">"actionSlide"</span> <span style="font-style:italic">data-animate-background</span>=<span style="color:#036a07">"false"</span>></span></pre>
+                            <p>It's pretty cool and enhanch the "action" style.</p>
+
+                            <h2>Slide Animation</h2>
+                            <p>Each slide has default properties during the slideshow:</p>
+                            <ul>
+                              <li>title = (empty)</li>
+                              <li>duration = 2000 (2 seconds)</li>
+                              <li>animation = slide</li>
+                              <li>direction = left-to-right</li>
+                              <li>textAlign = left</li>
+                              <li>easing = linear</li>
+                              </li>
+                            </ul>
+                            <p>You can change any of the default values using "data-" on each slide element (li).</p>
+
+                         	<h3>data-title</h3>
+                            <p>
+                            Appears as the slide title, different just in style from the slide content.
+                            </p>
+                            <pre class="prettyprint linenums">
+<span style="color:#1c02ff">&lt;<span style="font-weight:700">li</span> <span style="font-style:italic">data-title</span>=<span style="color:#036a07">"Slide I"</span>></span></pre>
+	
+                            <h3>data-duration</h3>
+                            <p>
+                            The duration of the slide animation.
+                            </p>
+                            <pre class="prettyprint linenums">
+<span style="color:#1c02ff">&lt;<span style="font-weight:700">li</span> <span style="font-style:italic">data-duration</span>=<span style="color:#036a07">"5000"</span>></span></pre>
+
+                            <h3>data-animation</h3>
+                            <p>
+                            The animaiton type for this slide, possible values are currently 'fade' or 'slide'.
+                            </p>
+                            <pre class="prettyprint linenums">
+<span style="color:#1c02ff">&lt;<span style="font-weight:700">li</span> <span style="font-style:italic">data-animation</span>=<span style="color:#036a07">"slide/fade"</span>></span></pre>
+
+                            <h3>data-direction</h3>
+                            <p>
+                            Only relevant for 'slide' animation. Controls the direction of the animation, possible values are 'rtl' or 'ltr'.
+                            </p>
+                            <pre class="prettyprint linenums">
+<span style="color:#1c02ff">&lt;<span style="font-weight:700">li</span> <span style="font-style:italic">data-direction</span>=<span style="color:#036a07">"rtl/ltr"</span>></span></pre>
+
+                            <h3>data-textAlign</h3>
+                            <p>
+                            The slide content text alignment.
+                            </p>
+                            <pre class="prettyprint linenums">
+<span style="color:#1c02ff">&lt;<span style="font-weight:700">li</span> <span style="font-style:italic">data-textAlign</span>=<span style="color:#036a07">"center"</span>></span></pre>
+
+                            <h3>data-easing</h3>
+                            <p>
+                            The easing function of the slide animation.
+                            </p>
+                            <pre class="prettyprint linenums">
+<span style="color:#1c02ff">&lt;<span style="font-weight:700">li</span> <span style="font-style:italic">data-easing</span>=<span style="color:#036a07">"linear"</span>></span></pre>                      
+                            <p class="alert alert-info">
+                              Using easing functions other than 'linear' requires jQuery UI library.
+                            </p>
+                        </section>
+
+                      <section id="css">
+                            <div class="page-header">
+                                <h1>CSS Customization</h1>
+                            </div>                           
+                            <p>ActionSlideJS works on top of your container element, you can style the container as you wish.
+                            <br />
+                            In order to match ActionSlideJS styling to your container, use the following classes:</p>
+
+                            <h4>actionslide-container</h4>
+                            <p>Container for each animated slide.</p>
+                            <pre class="prettyprint linenums">
+<span style="font-style:italic">.actionslide-container</span> <span style="font-weight:700">a</span> {
+    <span style="color:#6d79de;font-weight:700">color</span>: <span style="color:#06960e;font-weight:700">white</span>;
+    <span style="color:#6d79de;font-weight:700">text-decoration</span>: <span style="color:#06960e;font-weight:700">underline</span>;
+}
+
+<span style="font-style:italic">.actionslide-container</span> <span style="font-weight:700">a</span><span style="font-style:italic">:hover</span> {
+    <span style="color:#6d79de;font-weight:700">text-decoration</span>: <span style="color:#06960e;font-weight:700">none</span>;
+}
+</pre>
+                            <h4>actionslide-title</h4>
+                            <p>Slide title style</p>
+                            <pre class="prettyprint linenums">
+<span style="font-style:italic">.actionslide-title</span> {
+    <span style="color:#6d79de;font-weight:700">font-size</span>: <span style="color:#0000cd">34<span style="color:#00f;font-weight:700">px</span></span>; 
+    <span style="color:#6d79de;font-weight:700">font-style</span>: <span style="color:#06960e;font-weight:700">italic</span>; 
+    <span style="color:#6d79de;font-weight:700">font-weight</span>: <span style="color:#06960e;font-weight:700">bold</span>; 
+    <span style="color:#6d79de;font-weight:700">color</span>: <span style="color:#06960e;font-weight:700">black</span>; 
+    <span style="color:#6d79de;font-weight:700">margin-bottom</span>: <span style="color:#0000cd">10<span style="color:#00f;font-weight:700">px</span></span>;
+    <span style="color:#6d79de;font-weight:700">text-shadow</span>: <span style="color:#0000cd">-1<span style="color:#00f;font-weight:700">px</span></span> <span style="color:#0000cd">-1<span style="color:#00f;font-weight:700">px</span></span> <span style="color:#c5060b;font-weight:700">#bbb</span>,<span style="color:#0000cd">1<span style="color:#00f;font-weight:700">px</span></span> <span style="color:#0000cd">1<span style="color:#00f;font-weight:700">px</span></span> <span style="color:#c5060b;font-weight:700">#bbb</span>;
+    <span style="color:#6d79de;font-weight:700">color</span>:<span style="color:#c5060b;font-weight:700">#eee</span>;
+    <span style="color:#6d79de;font-weight:700">letter-spacing</span>: <span style="color:#0000cd">2<span style="color:#00f;font-weight:700">px</span></span>;
+}</pre>
+                            <h4>actionslide-content</h4>
+                            <p>Slide content style</p>
+                            <pre class="prettyprint linenums">
+<span style="font-style:italic">.actionslide-content</span> {
+    <span style="color:#6d79de;font-weight:700">font-size</span>: <span style="color:#0000cd">18<span style="color:#00f;font-weight:700">px</span></span>; 
+    <span style="color:#6d79de;font-weight:700">text-shadow</span>: <span style="color:#0000cd">-1<span style="color:#00f;font-weight:700">px</span></span> <span style="color:#0000cd">-1<span style="color:#00f;font-weight:700">px</span></span> <span style="color:#c5060b;font-weight:700">#bbb</span>,<span style="color:#0000cd">1<span style="color:#00f;font-weight:700">px</span></span> <span style="color:#0000cd">1<span style="color:#00f;font-weight:700">px</span></span> <span style="color:#c5060b;font-weight:700">#bbb</span>;
+    <span style="color:#6d79de;font-weight:700">color</span>:<span style="color:#c5060b;font-weight:700">#eee</span>;
+}</pre>
+                            <h4>actionslide-bglines</h4>
+                            <p>Background lines animation</p>
+                            <pre class="prettyprint linenums">
+<span style="font-style:italic">.actionslide-bglines</span> {
+    <span style="color:#6d79de;font-weight:700">height</span>: <span style="color:#0000cd">2<span style="color:#00f;font-weight:700">px</span></span>; 
+    <span style="color:#6d79de;font-weight:700">background-color</span>: <span style="color:#06960e;font-weight:700">white</span>; 
+    <span style="color:#6d79de;font-weight:700">opacity</span>: <span style="color:#0000cd">0.1</span>
+}
+</pre>
+                        </section>         
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer><span>Copyright © 2014 All Rights Reserved - <a href='http://codecanyon.net/user/liriboy' target="_blank">liriboy</a></span></footer>
+    </body>
+</html>

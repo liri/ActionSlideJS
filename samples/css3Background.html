@@ -1,0 +1,233 @@
+<html>
+<head>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
+	<script type="text/javascript" src="../actionslide.min.js"></script>
+	<link rel='stylesheet' href="../actionslide.css" type="text/css">
+	<title>ActionSlideJS Simple Usage Demo</title>
+
+	<script>
+		$( document ).ready(function () {
+			$(".animationCanvas").height($(window).height());
+		});
+	</script>
+
+	<style>
+		*{ margin: 0; padding: 0;}
+
+		body {
+			/*To hide the horizontal scroller appearing during the animation*/
+			overflow: hidden;
+		}
+
+		#clouds{
+			padding: 100px 0;
+			background: #c9dbe9;
+			background: -webkit-linear-gradient(top, #c9dbe9 0%, #fff 100%);
+			background: -linear-gradient(top, #c9dbe9 0%, #fff 100%);
+			background: -moz-linear-gradient(top, #c9dbe9 0%, #fff 100%);
+		}
+
+		.cloud {
+			width: 200px; height: 60px;
+			background: #fff;
+			
+			border-radius: 200px;
+			-moz-border-radius: 200px;
+			-webkit-border-radius: 200px;
+			
+			position: relative; 
+		}
+
+		.cloud:before, .cloud:after {
+			content: '';
+			position: absolute; 
+			background: #fff;
+			width: 100px; height: 80px;
+			position: absolute; top: -15px; left: 10px;
+			
+			border-radius: 100px;
+			-moz-border-radius: 100px;
+			-webkit-border-radius: 100px;
+			
+			-webkit-transform: rotate(30deg);
+			transform: rotate(30deg);
+			-moz-transform: rotate(30deg);
+		}
+
+		.cloud:after {
+			width: 120px; height: 120px;
+			top: -55px; left: auto; right: 15px;
+		}
+
+		/*Time to animate*/
+		.x1 {
+			-webkit-animation: moveclouds 15s linear infinite;
+			-moz-animation: moveclouds 15s linear infinite;
+			-o-animation: moveclouds 15s linear infinite;
+		}
+
+		/*variable speed, opacity, and position of clouds for realistic effect*/
+		.x2 {
+			left: 200px;
+			
+			-webkit-transform: scale(0.6);
+			-moz-transform: scale(0.6);
+			transform: scale(0.6);
+			opacity: 0.6; /*opacity proportional to the size*/
+			
+			/*Speed will also be proportional to the size and opacity*/
+			/*More the speed. Less the time in 's' = seconds*/
+			-webkit-animation: moveclouds 25s linear infinite;
+			-moz-animation: moveclouds 25s linear infinite;
+			-o-animation: moveclouds 25s linear infinite;
+		}
+
+		.x3 {
+			left: -250px; top: -200px;
+			
+			-webkit-transform: scale(0.8);
+			-moz-transform: scale(0.8);
+			transform: scale(0.8);
+			opacity: 0.8; /*opacity proportional to the size*/
+			
+			-webkit-animation: moveclouds 20s linear infinite;
+			-moz-animation: moveclouds 20s linear infinite;
+			-o-animation: moveclouds 20s linear infinite;
+		}
+
+		.x4 {
+			left: 470px; top: -250px;
+			
+			-webkit-transform: scale(0.75);
+			-moz-transform: scale(0.75);
+			transform: scale(0.75);
+			opacity: 0.75; /*opacity proportional to the size*/
+			
+			-webkit-animation: moveclouds 18s linear infinite;
+			-moz-animation: moveclouds 18s linear infinite;
+			-o-animation: moveclouds 18s linear infinite;
+		}
+
+		.x5 {
+			left: -150px; top: -150px;
+			
+			-webkit-transform: scale(0.8);
+			-moz-transform: scale(0.8);
+			transform: scale(0.8);
+			opacity: 0.8; /*opacity proportional to the size*/
+			
+			-webkit-animation: moveclouds 20s linear infinite;
+			-moz-animation: moveclouds 20s linear infinite;
+			-o-animation: moveclouds 20s linear infinite;
+		}
+
+		@-webkit-keyframes moveclouds {
+			0% {margin-left: 1000px;}
+			100% {margin-left: -1000px;}
+		}
+		@-moz-keyframes moveclouds {
+			0% {margin-left: 1000px;}
+			100% {margin-left: -1000px;}
+		}
+		@-o-keyframes moveclouds {
+			0% {margin-left: 1000px;}
+			100% {margin-left: -1000px;}
+		}
+
+		.actionslide-container a {
+			color: black;
+			text-decoration: underline;
+		}
+
+		.actionslide-container a:hover {
+			text-decoration: none;
+		}
+
+		.actionslide-title {
+			font-size: 34px; 
+			font-style: italic; 
+			font-weight: bold; 
+			color: black; 
+			margin-bottom: 10px;
+			text-shadow: none;
+			color:red;
+			letter-spacing: 2px;
+		}
+
+		.actionslide-content {
+			font-size: 18px; 
+			text-shadow: none;
+			color:blue;
+		}
+	</style>
+</head>
+<body style="margin: 0px; padding 0px; overflow: hidden;">
+	<div id="clouds">
+		<div class="cloud x1"></div>
+		<!-- Time for multiple clouds to dance around -->
+		<div class="cloud x2"></div>
+		<div class="cloud x3"></div>
+		<div class="cloud x4"></div>
+		<div class="cloud x5"></div>
+	</div>
+	<div class="animationCanvas">
+		<ul id="myAnimation" data-role="actionSlide" data-animate-background="false">
+			<li data-title="ActionSlideJS" data-duration="3000" data-animation="fade" data-direction="ltr" data-align="left" >
+				<span>
+				</span>
+			</li>
+			<li data-title="Author" data-duration="2000" data-animation="fade" data-direction="ltr" data-align="center">
+				<span>
+					<a href="http://codecanyon.net/user/liriboy" target="_blank">Liriboy</a>
+				</span>
+			</li>
+			<li data-title="Feature List" data-duration="3000" data-animation="fade" data-direction="ltr" data-align="left">
+				<span>
+				</span>
+			</li>
+			<li data-title="Slide Animation" data-duration="4000" data-animation="slide" data-direction="ltr" data-align="left">
+				<span>
+					Sliiiiiiidddddinnnnng
+				</span>
+			</li>
+			<li data-title="Direction Control" data-duration="4000" data-animation="slide" data-direction="rtl" data-align="left">
+				<span>
+					Sliiiiiiidddddinnnnng
+				</span>
+			</li>
+			<li data-title="Fade Animation" data-duration="2000" data-animation="fade" data-direction="ltr" data-align="center">
+				<span>
+					boooo!
+				</span>
+			</li>
+			<li data-title="HTML Slides!" data-duration="3000" data-animation="slide" data-direction="rtl" data-align="left">
+				<span>
+					<ul>
+						<li style="color: yellow">
+							I'm Yellow
+						</li>
+						<li style="font-weight: bolder">
+							I'm Bold
+						</li>
+						<li style="text-decoration: underline">
+							I'm underlined!
+						</li>
+					</ul>					
+				</span>
+			</li>
+			<li data-title="Image Slides" data-duration="4000" data-animation="slide" data-direction="ltr" data-align="center">
+				<img src="triworks_abstract22.jpg" width="200"/>
+				<br/>
+				<img src="triworks_abstract26.jpg" width="100"/>
+				<img src="triworks_abstract27.jpg" width="100"/>
+			</li>
+			<li data-title="" data-duration="5000" data-animation="fade" data-direction="ltr" data-align="left" >
+				<span>
+					Thank you!
+				</span>
+			</li>
+		</ul>
+	</div>
+	<div style="position: fixed; bottom: 10px; left: 10px;">Clouds animation by <a href="http://thecodeplayer.com/walkthrough/pure-css3-animated-clouds-background">thecodeplayer</a></div>
+</body>
+</html>
