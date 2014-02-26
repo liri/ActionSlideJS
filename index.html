@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <title>ActionSlideJS by liri</title>
+  </head>
+
+  <body>
+    <div id="container">
+      <div class="inner">
+
+        <header>
+          <h1>ActionSlideJS</h1>
+          <h2>Simple animation library for action movie credits (aka &quot;action slide&quot;) in JavaScript</h2>
+        </header>
+
+        <section id="downloads" class="clearfix">
+          <a href="https://github.com/liri/ActionSlideJS/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
+          <a href="https://github.com/liri/ActionSlideJS/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
+          <a href="https://github.com/liri/ActionSlideJS" id="view-on-github" class="button"><span>View on GitHub</span></a>
+        </section>
+
+        <hr>
+
+        <section id="main_content">
+          <h1>
+<a name="actionslidejs" class="anchor" href="#actionslidejs"><span class="octicon octicon-link"></span></a>ActionSlideJS</h1>
+
+<p>Ready? Steady? Action!</p>
+
+<p>Simple animation library for action movie credits (aka "action slide") in JavaScript, supporting all major browsers:</p>
+
+<ul>
+<li>IE9+</li>
+<li>Firefox</li>
+<li>Safari</li>
+<li>Chrome</li>
+<li>Opera</li>
+</ul><p><strong>Prerequisite: JQuery</strong></p>
+
+<p>Copyright (c) 2013 - 2013 Liron Aichel <br></p>
+
+<p>Project homepage: <a href="http://lironaichel.com/lironaichel/jsworks/actionslide/">http://lironaichel.com/lironaichel/jsworks/actionslide/</a> <br>
+Github homepage: <a href="http://liri.github.io/ActionSlideJS">http://liri.github.io/ActionSlideJS</a>. <br></p>
+
+<p>CSS3 Demo: <a href="http://lironaichel.com/lironaichel/jsworks/actionslide/samples/css3Background.html">http://lironaichel.com/lironaichel/jsworks/actionslide/samples/css3Background.html</a> <br>
+Documentation: <a href="http://lironaichel.com/lironaichel/jsworks/actionslide/docs/index.html">http://lironaichel.com/lironaichel/jsworks/actionslide/docs/index.html</a> <br></p>
+
+<p>Licensed under MIT-style license:
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+ of this software and associated documentation files (the "Software"), to deal
+ in the Software without restriction, including without limitation the rights
+ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:</p>
+
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ SOFTWARE.</p>
+
+<p></p><div>
+                         <div>
+                                <h1>
+<a name="getting-started" class="anchor" href="#getting-started"><span class="octicon octicon-link"></span></a>Getting Started</h1>
+                            </div>
+                            <p>
+                            ActionSlideJS is a tiny animation library for creating a "action movie opening" like animation (also works as jQuery plugin).
+                            <br>
+                            To start use ActionSlideJS, include jQuery library:
+                            </p>
+
+<pre><code>  &lt;script src="js/jquery.min.js"&gt;&lt;/script&gt;
+</code></pre>
+
+                            Include ActionSlideJS library:
+
+<pre><code>  &lt;script src="js/actionslide.min.js"&gt;&lt;/script&gt;
+</code></pre>
+                            <p>
+                            Include ActionSlideJS styling (CSS):
+                            </p>
+<pre><code>  &lt;link rel="stylesheet" type="text/css" href="css/actionslide.css" /&gt;
+</code></pre>
+                            <h4>
+<a name="youre-good-to-go" class="anchor" href="#youre-good-to-go"><span class="octicon octicon-link"></span></a>You're good to go!</h4>
+                          <div>
+                                <h1>
+<a name="basic-example" class="anchor" href="#basic-example"><span class="octicon octicon-link"></span></a>Basic example</h1>
+                            </div>
+                                           
+                            <h2>
+<a name="zero-lines-of-code" class="anchor" href="#zero-lines-of-code"><span class="octicon octicon-link"></span></a>Zero lines of code!</h2>
+                            <p>
+                            ActionSlideJS automatically detect your DOM element. Just place "data-role='actionSlide'" on your list element (ul):
+                            </p>
+<pre>
+  &lt;ul data-role="actionSlide"&gt;
+        &lt;li data-title="Slide I" data-duration="3000"&gt;
+            &lt;span&gt;Slide I Content&lt;/span&gt;
+        &lt;/li&gt;
+        &lt;li data-title="Slide II" data-duration="2000"&gt;
+            &lt;span&gt;Slide II Content&lt;/span&gt;
+        &lt;/li&gt;
+&lt;/ul
+</pre>
+                          <div>
+                                <h1>
+<a name="helpful-options" class="anchor" href="#helpful-options"><span class="octicon octicon-link"></span></a>Helpful options</h1>
+                            </div>
+                            <h2>
+<a name="stage-animation" class="anchor" href="#stage-animation"><span class="octicon octicon-link"></span></a>Stage Animation</h2>
+                            <p>There is an option to animate background lines, you can disable it using:</p>
+                            <h3>
+<a name="data-animate-background" class="anchor" href="#data-animate-background"><span class="octicon octicon-link"></span></a>data-animate-background</h3>
+<pre>
+&lt;ul data-role="actionSlide" data-animate-background="false"&gt;</pre>
+                            <p>It's pretty cool and enhanch the "action" style.</p>
+
+                            <h2>
+<a name="slide-animation" class="anchor" href="#slide-animation"><span class="octicon octicon-link"></span></a>Slide Animation</h2>
+                            <p>Each slide has default properties during the slideshow:</p>
+                            <ul>
+<li>title = (empty)</li>
+                              <li>duration = 2000 (2 seconds)</li>
+                              <li>animation = slide</li>
+                              <li>direction = left-to-right</li>
+                              <li>textAlign = left</li>
+                              <li>easing = linear</li>
+                              
+                            </ul>
+<p>You can change any of the default values using "data-" on each slide element (li).</p>
+
+                            <h3>
+<a name="data-title" class="anchor" href="#data-title"><span class="octicon octicon-link"></span></a>data-title</h3>
+                            <p>
+                            Appears as the slide title, different just in style from the slide content.
+                            </p>
+                            <pre>
+&lt;li data-title="Slide I"&gt;</pre>
+    
+                            <h3>
+<a name="data-duration" class="anchor" href="#data-duration"><span class="octicon octicon-link"></span></a>data-duration</h3>
+                            <p>
+                            The duration of the slide animation.
+                            </p>
+                            <pre>
+&lt;li data-duration="5000"&gt;</pre>
+
+                            <h3>
+<a name="data-animation" class="anchor" href="#data-animation"><span class="octicon octicon-link"></span></a>data-animation</h3>
+                            <p>
+                            The animaiton type for this slide, possible values are currently 'fade' or 'slide'.
+                            </p>
+                            <pre>
+&lt;li data-animation="slide/fade"&gt;</pre>
+
+                            <h3>
+<a name="data-direction" class="anchor" href="#data-direction"><span class="octicon octicon-link"></span></a>data-direction</h3>
+                            <p>
+                            Only relevant for 'slide' animation. Controls the direction of the animation, possible values are 'rtl' or 'ltr'.
+                            </p>
+                            <pre>
+&lt;li data-direction="rtl/ltr"&gt;</pre>
+
+                            <h3>
+<a name="data-textalign" class="anchor" href="#data-textalign"><span class="octicon octicon-link"></span></a>data-textAlign</h3>
+                            <p>
+                            The slide content text alignment.
+                            </p>
+                            <pre>
+&lt;li data-textAlign="center"&gt;</pre>
+
+                            <h3>
+<a name="data-easing" class="anchor" href="#data-easing"><span class="octicon octicon-link"></span></a>data-easing</h3>
+                            <p>
+                            The easing function of the slide animation.
+                            </p>
+                            <pre>
+&lt;li data-easing="linear"&gt;</pre>                      
+                            <p>
+                              Using easing functions other than 'linear' requires jQuery UI library.
+                            </p>
+                          <div>
+                                <h1>
+<a name="css-customization" class="anchor" href="#css-customization"><span class="octicon octicon-link"></span></a>CSS Customization</h1>
+                            </div>                           
+                            <p>ActionSlideJS works on top of your container element, you can style the container as you wish.
+                            <br>
+                            In order to match ActionSlideJS styling to your container, use the following classes:</p>
+
+                            <h4>
+<a name="actionslide-container" class="anchor" href="#actionslide-container"><span class="octicon octicon-link"></span></a>actionslide-container</h4>
+                            <p>Container for each animated slide.</p>
+                            <pre>
+.actionslide-container a {
+    color: white;
+    text-decoration: underline;
+}
+
+.actionslide-container a:hover {
+    text-decoration: none;
+}
+</pre>
+
+<pre><code>                        &lt;h4&gt;actionslide-title&lt;/h4&gt;
+                        &lt;p&gt;Slide title style&lt;/p&gt;
+                        &lt;pre class="prettyprint linenums"&gt;
+</code></pre>
+
+<p>.actionslide-title {
+    font-size: 34px; 
+    font-style: italic; 
+    font-weight: bold; 
+    color: black; 
+    margin-bottom: 10px;
+    text-shadow: -1px -1px #bbb,1px 1px #bbb;
+    color:#eee;
+    letter-spacing: 2px;
+}
+                            </p>
+<h4>
+<a name="actionslide-content" class="anchor" href="#actionslide-content"><span class="octicon octicon-link"></span></a>actionslide-content</h4>
+                            <p>Slide content style</p>
+                            <pre>
+.actionslide-content {
+    font-size: 18px; 
+    text-shadow: -1px -1px #bbb,1px 1px #bbb;
+    color:#eee;
+}</pre>
+                            <h4>
+<a name="actionslide-bglines" class="anchor" href="#actionslide-bglines"><span class="octicon octicon-link"></span></a>actionslide-bglines</h4>
+                            <p>Background lines animation</p>
+                            <pre>
+.actionslide-bglines {
+    height: 2px; 
+    background-color: white; 
+    opacity: 0.1
+}
+</pre>
+                         <br>
+</div>
+        </section>
+
+        <footer>
+          ActionSlideJS is maintained by <a href="https://github.com/liri">liri</a><br>
+          This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
+        </footer>
+
+                  <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-42121628-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+      </div>
+    </div>
+  </body>
+</html>
