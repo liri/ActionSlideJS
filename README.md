@@ -1,6 +1,8 @@
 # ActionSlideJS
 Ready? Steady? Action!
 
+![alt tag](http://lironaichel.com/lironaichel/jsworks/actionslide/img.jpg)
+
 Simple animation library for action movie credits (aka "action slide") in JavaScript, supporting all major browsers:
  * IE9+
  * Firefox
