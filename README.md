@@ -1,7 +1,7 @@
 # ActionSlideJS
 Ready? Steady? Action!
 
-![alt tag](http://lironaichel.com/lironaichel/jsworks/actionslide/css3.jpg)
+![alt tag](http://lironaichel.com/jsworks/actionslide/css3.jpg)
 
 Simple animation library for action movie credits (aka "action slide") in JavaScript, supporting all major browsers:
  * IE9+
@@ -14,11 +14,11 @@ Simple animation library for action movie credits (aka "action slide") in JavaSc
 
 Copyright (c) 2013 - 2013 Liron Aichel <br/>
 
-Project homepage: http://lironaichel.com/lironaichel/jsworks/actionslide/ <br/>
+Project homepage: http://lironaichel.com/jsworks/actionslide/ <br/>
 Github homepage: http://liri.github.io/ActionSlideJS. <br/>
 
-CSS3 Demo: http://lironaichel.com/lironaichel/jsworks/actionslide/samples/css3Background.html <br/>
-Documentation: http://lironaichel.com/lironaichel/jsworks/actionslide/docs/index.html <br/>
+CSS3 Demo: http://lironaichel.com/jsworks/actionslide/samples/css3Background.html <br/>
+Documentation: http://lironaichel.com/jsworks/actionslide/docs/index.html <br/>
 
 Licensed under MIT-style license:
  Permission is hereby granted, free of charge, to any person obtaining a copy
