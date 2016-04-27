@@ -202,3 +202,5 @@ Licensed under MIT-style license:
 </pre>
                         </section>         
                     </div>
+
+[![Analytics](https://ga-beacon.appspot.com/UA-5480161-11/ActionSlideJS/readme)](https://github.com/igrigorik/ga-beacon)
